@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Diseño y nuevos medios" />
+        <link href="style.css" rel="stylesheet" />
+        <title>&#127783; cursos cules</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="index.html">Valentina Cruz</a>
+                <a href="emoji.html">EMOJI</a>
+                <a href="swiftie.html">SWIFTIE</a>
+                <a href="cursos.html" style="text-decoration: line-through;">CURSOS</a>
+            </h1>
+        </header>
+        <main></main>
+        <footer>
+            <p><a href="https://github.com/profesorfaco/dno037-2023-2">Diseño y nuevos medios</a> <a href="https://github.com/profesorfaco/dno037-2023-2/tree/main/clase-03">23 de agosto, 2023</a></p>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" integrity="sha512-bcfltY+lNLlNxz38yBBm/HLaUB1gTV6I0e+fahbF9pS6roIdzUytozWdnFV8ZnM6cSAG5EbmO0ag0a/fLZSG4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script> 
+            var h, s;
+            function setup() {
+                createCanvas(windowWidth, windowHeight).position(0, 0).style("z-index", "-1");
+            }
+            function draw() {
+                colorMode(HSB, 360, 100, 100);
+                h = map(mouseX, 0, windowWidth, 0, 360);
+                s = map(mouseY, 0, windowHeight, 100, 0);
+                background(h, s, 55);
+            }
+            function windowResized() {
+                resizeCanvas(windowWidth, windowHeight);
+            }
+        </script>
+    </body>
+</html>
